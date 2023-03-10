@@ -141,6 +141,11 @@ $rounded: 10px;
     color: $color-black;
     margin-bottom: 15px;
 
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
     @include response-phone() {
       margin-bottom: 10px;
       font-size: $font-ml;
@@ -153,6 +158,11 @@ $rounded: 10px;
     font-size: $font-m;
     line-height: 130%;
     color: $color-gray-dark;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
     @include response-phone() {
       font-size: $font-s;
