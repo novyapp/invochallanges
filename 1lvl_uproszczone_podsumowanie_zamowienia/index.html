@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVO Academy JS Starter with Vite</title>
+  </head>
+
+  <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
+
+  <body>
+    <div id="home-page">
+      <div class="card">
+        <div class="card__picture">&nbsp;</div>
+
+        <div class="card__body">
+          <div class="card__details">
+            <h1 class="card__details--title">Order Summary</h1>
+            <span class="card__details--text">
+              You're close! Confirm your purchase and complete your order in the
+              next step
+            </span>
+          </div>
+          <div class="card__plan-summary">
+            <div class="card__plan-icon">&nbsp;</div>
+            <div class="card__spacer"></div>
+            <div class="card__plan-info">
+              <div class="card__plan-details">
+                <h2 class="card__plan-details--header">Annual Plan</h2>
+                <div class="card__plan-details--text">$58.99 / year</div>
+              </div>
+              <a href="#" class="card__plan-change">Change</a>
+            </div>
+          </div>
+        </div>
+        <div>
+
+        <div  class="card__buttons">
+          <div class="card__payment">
+            <a href="#" class="btn">Procced to Payment</a>
+            <div class="card__loader card__loader-hidden"></div>
+          </div>
+
+          <a class="card__cancel" href="#">Cancel Order</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/global-scripts/main.js"></script>
+    <script
+      type="module"
+      src="/src/pages/home-page/scripts/home-page.js"
+    ></script>
+  </body>
+</html>
