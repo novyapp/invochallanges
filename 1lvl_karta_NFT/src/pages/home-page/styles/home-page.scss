@@ -1,0 +1,215 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+/// Colors
+$color-background: #3f5067;
+$color-title: #fff;
+$color-primary: #04fcfa;
+$color-box: #13243c;
+$color-body: #9293b9;
+$color-stroke: #2b3953;
+
+//Font Size
+$font-l: 24px;
+$font-m: 18px;
+$font-s: 16px;
+$font-xs: 14px;
+
+//Var
+$rounded: 20px;
+
+@mixin response-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+#home-page {
+  background-color: #0c1829;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 413px;
+  min-height: 556px;
+  background: $color-box;
+  border-radius: $rounded;
+
+  @include response-phone() {
+    width: 343px;
+    min-height: 486px;
+  }
+
+  &__bg {
+    display: flex;
+    min-height: 556px;
+    flex-direction: column;
+    border-top-left-radius: $rounded;
+    border-top-right-radius: $rounded;
+    background: url("/images/card_bg.png") no-repeat top center;
+
+    @include response-phone() {
+      min-height: 486px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  &__header {
+    flex-direction: column;
+    margin: 0 32px;
+    padding-top: 32px;
+    padding-bottom: 4px;
+    display: flex;
+    font-style: normal;
+    line-height: 33px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include response-phone() {
+      margin: 0 24px;
+      padding-top: 24px;
+    }
+
+    &--title {
+      display: flex;
+      font-weight: 600;
+      font-size: $font-l;
+      color: $color-title;
+      letter-spacing: 0%;
+      line-height: $font-l;
+      margin-bottom: 28px;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @include response-phone() {
+        margin-bottom: 19px;
+        padding-top: 0px;
+      }
+    }
+    &--description {
+      display: flex;
+      margin-bottom: 24px;
+      line-height: 160%;
+      font-size: $font-m;
+      font-weight: 500;
+      color: $color-body;
+      letter-spacing: -1%;
+
+      @include response-phone() {
+        letter-spacing: 0%;
+        margin-bottom: 14px;
+        padding-top: 0px;
+      }
+    }
+  }
+
+  &__ETH-block {
+    display: flex;
+    margin: 8px 32px;
+    margin-bottom: 8px;
+    padding-bottom: 28px;
+    border-bottom: 1px $color-stroke solid;
+
+    @include response-phone() {
+      margin: 0px 24px;
+      padding-bottom: 14px;
+
+      font-size: $font-s;
+    }
+  }
+
+  &__ETH {
+    display: flex;
+    gap: 9px;
+
+    flex-direction: row;
+    align-items: center;
+    font-size: $font-m;
+    font-style: normal;
+    line-height: 38px;
+    color: $color-primary;
+
+    @include response-phone() {
+      font-size: $font-s;
+    }
+
+    &--icon {
+      width: 23px;
+      height: 28px;
+    }
+  }
+  &__date {
+    margin-left: auto;
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    gap: 6px;
+    flex-direction: row;
+
+    font-size: $font-s;
+    font-style: normal;
+
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -1%;
+    color: $color-body;
+
+    @include response-phone() {
+      font-size: $font-xs;
+    }
+
+    &--icon {
+      width: 24px;
+      height: 18px;
+    }
+    &--time {
+      display: flex;
+      padding-top: 2px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 40px;
+    padding-top: 10px;
+    margin: 24px 32px;
+    margin-top: 6px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-s;
+    line-height: 160%;
+    letter-spacing: -0.01em;
+
+    @include response-phone() {
+      padding-top: 8px;
+      margin: 20px 24px;
+      margin-top: 12px;
+      font-size: $font-xs;
+    }
+
+    &--avatar {
+      height: 40px;
+    }
+    &--link {
+      color: $color-title;
+      text-decoration: none;
+    }
+  }
+}
