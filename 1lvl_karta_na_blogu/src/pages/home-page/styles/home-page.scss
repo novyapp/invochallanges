@@ -1,0 +1,184 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+/// Colors
+$color-black: #000000;
+$color-gray-dark: #7c7c7c;
+$color-gray-medium: #d5d5d5;
+$color-gray-light: #ededed;
+
+$color-white: #ffffff;
+
+//Font Size
+$font-l: 24px;
+$font-ml: 18px;
+$font-m: 16px;
+$font-s: 14px;
+$font-xs: 12px;
+
+//Var
+$rounded: 10px;
+
+@mixin response-phone {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+#home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #dddddd;
+}
+
+.blog-cart {
+  padding: 16px;
+  width: 608px;
+  min-height: 571px;
+  background-color: $color-white;
+  border-radius: $rounded;
+  text-decoration: none;
+
+  @include response-phone() {
+    min-height: 518px;
+    width: 343px;
+  }
+
+  &:hover &__image {
+    transform: scale(1.01);
+  }
+  &:hover &__readmore {
+    text-decoration: underline;
+  }
+
+  &__image {
+    display: flex;
+    height: 296px;
+    width: 100%;
+    margin-bottom: 33px;
+
+    background: url("/images/image.png") center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: all 0.2s;
+
+    @include response-phone() {
+      margin-bottom: 22px;
+      height: 273px;
+    }
+  }
+
+  &__publish-info {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-bottom: 31px;
+
+    @include response-phone() {
+      height: 36px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+
+    @include response-phone() {
+      gap: 8px;
+    }
+
+    &--name {
+      font-style: normal;
+      font-weight: 500;
+      font-size: $font-s;
+      line-height: 100%;
+      color: $color-black;
+
+      @include response-phone() {
+        padding-top: 4px;
+        margin-bottom: 0px;
+        font-size: $font-xs;
+      }
+    }
+  }
+  &__avatar {
+    display: flex;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+
+    background: $color-gray-light;
+  }
+
+  &__date {
+    margin-left: auto;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-s;
+    line-height: 100%;
+    color: $color-gray-dark;
+
+    @include response-phone() {
+      padding-top: 4px;
+      margin-bottom: 0px;
+      font-size: $font-xs;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-l;
+    line-height: 100%;
+    color: $color-black;
+    margin-bottom: 15px;
+
+    @include response-phone() {
+      margin-bottom: 10px;
+      font-size: $font-ml;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-m;
+    line-height: 130%;
+    color: $color-gray-dark;
+
+    @include response-phone() {
+      font-size: $font-s;
+    }
+  }
+
+  &__readmore {
+    margin-top: 32px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-m;
+    line-height: 130%;
+    color: $color-black;
+
+    @include response-phone() {
+      margin-top: 23px;
+      font-size: $font-s;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 12px;
+      height: 11px;
+      width: 14px;
+      background: url("/images/arrow.png");
+    }
+  }
+}
