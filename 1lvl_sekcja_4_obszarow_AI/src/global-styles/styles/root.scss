@@ -1,0 +1,44 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+
+/// Colors
+$color-primary-violet: #0f162d;
+$color-primary-pink: #ca59ff;
+$color-primary-blue: #6c7cff;
+$color-primary-lightblue: #2affff;
+$color-primary-yellow: #fff629;
+
+$color-secondary-1: #fff;
+$color-secondary-2: #272d42;
+$color-secondary-3: #000;
+
+//Font Size
+$font-xl: 48px;
+$font-l: 32px;
+$font-m: 20px;
+$font-s: 16px;
+$font-xs: 14px;
+
+//consts
+$rounded: 20px;
+$rounded-mobile: 16px;
+
+//Media query menager
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,253 @@
+/// Colors
+$color-primary-violet: #0f162d;
+$color-primary-pink: #ca59ff;
+$color-primary-blue: #6c7cff;
+$color-primary-lightblue: #2affff;
+$color-primary-yellow: #fff629;
+
+$color-secondary-1: #fff;
+$color-secondary-2: #272d42;
+$color-secondary-3: #000;
+
+//Font Size
+$font-xl: 48px;
+$font-l: 32px;
+$font-m: 20px;
+$font-s: 16px;
+$font-xs: 14px;
+
+//consts
+$rounded: 20px;
+$rounded-mobile: 16px;
+
+//Media query menager
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-s {
+    @media only screen and (max-width: 395px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+//CLASSES
+
+#home-page {
+  width: 100%;
+  min-height: 70vh;
+  background-color: #0f162d;
+  padding-top: 100px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 90vh;
+  gap: 109px;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__container {
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 20px;
+
+    @include respond(tablet) {
+      width: 496px;
+      gap: 16px;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    @include respond(phone-s) {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+}
+
+.block-ai {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 467px;
+
+  @include respond(tablet) {
+    width: 496px;
+  }
+  @include respond(phone) {
+    width: 343px;
+  }
+  @include respond(phone-s) {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  &__title {
+    font-size: $font-xl;
+    line-height: 56px;
+    letter-spacing: -0.2%;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 24px;
+
+    @include respond(tablet) {
+      margin-bottom: 16px;
+    }
+
+    @include respond(phone) {
+      font-size: $font-l;
+      line-height: 40px;
+    }
+  }
+
+  &__text {
+    font-size: $font-s;
+    line-height: 24px;
+    letter-spacing: 0%;
+    font-weight: 400;
+    color: rgba($color-secondary-1, 1);
+  }
+}
+
+.feature-box {
+  width: 268px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  background-color: $color-secondary-2;
+  border-radius: $rounded;
+  margin-bottom: 7px;
+
+  @include respond(tablet) {
+    width: 240px;
+    padding: 20px 14px;
+    margin-bottom: 0px;
+    border-radius: $rounded-mobile;
+  }
+
+  @include respond(phone) {
+    width: 343px;
+  }
+
+  &__img-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: $rounded;
+    margin-bottom: 20px;
+
+    @include respond(tablet) {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 17px;
+      border-radius: $rounded-mobile;
+    }
+
+    &--1 {
+      background-color: rgba($color-primary-pink, 0.1);
+    }
+    &--2 {
+      background-color: rgba($color-primary-blue, 0.1);
+    }
+    &--3 {
+      background-color: rgba($color-primary-lightblue, 0.1);
+    }
+    &--4 {
+      background-color: rgba($color-primary-yellow, 0.1);
+    }
+  }
+
+  &__title {
+    font-size: $font-m;
+    line-height: 20px;
+    letter-spacing: 0%;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: $font-s;
+    line-height: 24px;
+    letter-spacing: 0%;
+    font-weight: 400;
+    color: rgba($color-secondary-1, 0.5);
+
+    @include respond(tablet) {
+      font-size: $font-xs;
+      line-height: 22px;
+      letter-spacing: 0%;
+      font-weight: 400;
+    }
+  }
+}
+
+.heading-primary {
+  font-size: $font-xl;
+  line-height: 56px;
+  letter-spacing: -0.2%;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 24px;
+
+  @include respond(tablet) {
+  }
+}
+
+.heading-secondary {
+  font-size: $font-l;
+  line-height: 40px;
+  letter-spacing: -0.2%;
+  font-weight: 500;
+}
+.heading-tertiary {
+  font-size: $font-m;
+  line-height: 20px;
+  letter-spacing: 0%;
+  font-weight: 500;
+}
+
+.text-primary {
+  font-size: $font-s;
+  line-height: 24px;
+  letter-spacing: 0%;
+  font-weight: 400;
+  color: rgba($color-secondary-1, 1);
+
+  @include respond(tablet) {
+    font-size: $font-xs;
+    line-height: 22px;
+    letter-spacing: 0%;
+    font-weight: 400;
+  }
+}
+.text-secondary {
+  font-size: $font-xs;
+  line-height: 22px;
+  letter-spacing: 0%;
+  font-weight: 400;
+}
