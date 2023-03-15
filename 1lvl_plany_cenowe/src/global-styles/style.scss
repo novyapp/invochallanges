@@ -10,20 +10,11 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Manrope", sans-serif;
-  color: var(--color-body);
-  background: var(--color-background);
-}
-
-p {
-  color: var(--color-on-surface);
+  font-family: "DM Sans", sans-serif;
+  color: var(--color-grey-dark-1);
+  background: #f9f8fb;
 }

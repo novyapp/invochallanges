@@ -3,10 +3,9 @@
 
 import "../styles/home-page.scss";
 
-const paymentButton = document.querySelector(".btn");
-const loader = document.querySelector(".card__loader");
+const paymentButton = document.querySelector(".card-actions__payment");
+const loader = document.querySelector(".card-actions__loader");
 
 paymentButton.addEventListener("click", function () {
-  loader.classList.remove("card__loader-hidden");
-  paymentButton.textContent = "Processing payment...";
+  loader.classList.remove("card-actions__loader-hidden");
 });

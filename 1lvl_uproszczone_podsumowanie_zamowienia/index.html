@@ -13,37 +13,32 @@
     <div id="home-page">
       <div class="card">
         <div class="card__picture">&nbsp;</div>
-
         <div class="card__body">
-          <div class="card__details">
-            <h1 class="card__details--title">Order Summary</h1>
-            <span class="card__details--text">
+          <div class="card-details">
+            <h1 class="card-details__title">Order Summary</h1>
+            <p class="card-details__text">
               You're close! Confirm your purchase and complete your order in the
               next step
-            </span>
+            </p>
           </div>
-          <div class="card__plan-summary">
-            <div class="card__plan-icon">&nbsp;</div>
-            <div class="card__spacer"></div>
-            <div class="card__plan-info">
-              <div class="card__plan-details">
-                <h2 class="card__plan-details--header">Annual Plan</h2>
-                <div class="card__plan-details--text">$58.99 / year</div>
+          <div class="card-summary">
+            <div class="card-summary__icon"><img src="/images/music.png" alt="plan icon" /></div>
+            <div class="card-summary__spacer"></div>
+            <div class="card-summary__info">
+              <div class="plan-details">
+                <h2 class="plan-details__header">Annual Plan</h2>
+                <div class="plan-details__text">$58.99 / year</div>
               </div>
-              <a href="#" class="card__plan-change">Change</a>
             </div>
+            <a href="#" class="card-summary__change">Change</a>
           </div>
         </div>
-        <div>
-
-        <div  class="card__buttons">
-          <div class="card__payment">
-            <a href="#" class="btn">Procced to Payment</a>
-            <div class="card__loader card__loader-hidden"></div>
-          </div>
-
-          <a class="card__cancel" href="#">Cancel Order</a>
-        </div>
+        <div  class="card-actions">
+          <button class="card-actions__payment">
+            <span class="card-actions__button">Proceed to Payment</span>
+            <div class="card-actions__loader card-actions__loader-hidden"></div>
+          </button>
+          <a class="card-actions__cancel" href="#">Cancel Order</a>
       </div>
     </div>
 

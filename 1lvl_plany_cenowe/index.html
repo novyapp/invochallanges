@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVO Academy JS Starter with Vite</title>
+  </head>
+
+  <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
+
+  <body>
+    <div id="home-page">
+      <section class="pricing">
+        <div class="pricing-header">
+          <h1 class="pricing-header__title">Pricing</h1>
+          <p class="pricing-header__text">
+            Choose the right pricing for you and get started with your project.
+          </p>
+        </div>
+        <div class="pricing__plans">
+          <div class="plan">
+            <h2 class="plan__name">Basic</h2>
+            <span class="plan__price"
+              >399
+              <span class="plan__price--currency">$</span>
+              <span class="plan__price--duration">/year</span>
+            </span>
+            <p class="plan__description">
+              For organizing every corner of your work & life.
+            </p>
+            <ul class="plan__list">
+              <li class="plan__item">Collaborative workspace</li>
+              <li class="plan__item">7 day page history</li>
+            </ul>
+            <button class="plan__button">Get started</button>
+          </div>
+
+          <div class="plan">
+            <h2 class="plan__name">Professional</h2>
+            <span class="plan__price"
+              >499
+              <span class="plan__price--currency">$</span>
+              <span class="plan__price--duration">/year</span>
+            </span>
+            <p class="plan__description">
+              A place for small groups to plan & get organized.
+            </p>
+            <ul class="plan__list">
+              <li class="plan__item">All features in Basic</li>
+              <li class="plan__item">Unlimited blocks for teams</li>
+              <li class="plan__item">30 day page history</li>
+            </ul>
+            <button class="plan__button">Get started</button>
+          </div>
+
+          <div class="plan">
+            <h2 class="plan__name">Enterprise</h2>
+            <span class="plan__price"
+              >599
+              <span class="plan__price--currency">$</span>
+              <span class="plan__price--duration">/year</span>
+            </span>
+            <p class="plan__description">
+              For companies using our software to connect several teams & tools.
+            </p>
+            <ul class="plan__list">
+              <li class="plan__item">SAML SSO</li>
+              <li class="plan__item">Private teamspaces</li>
+              <li class="plan__item">Advanced page analytics</li>
+              <li class="plan__item">90 day page history</li>
+            </ul>
+            <button class="plan__button">Get started</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/global-scripts/main.js"></script>
+    <script
+      type="module"
+      src="/src/pages/home-page/scripts/home-page.js"
+    ></script>
+  </body>
+</html>
